@@ -40,7 +40,7 @@ const GalleryModule = {
                             <label for="artwork-description">Description</label>
                             <textarea id="artwork-description" placeholder="Tell us about your work..."></textarea>
                         </div>
-                        <div class="form-group" id="text-work-field" class="hidden">
+                        <div class="form-group hidden" id="text-work-field">
                             <label for="artwork-text">Your Text (for poetry/writing)</label>
                             <textarea id="artwork-text" style="min-height: 200px;" placeholder="Enter your poem or text..."></textarea>
                         </div>
