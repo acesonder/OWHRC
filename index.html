@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HopeVoice Hub - Cobourg Street Community Platform">
+    <title>HopeVoice Hub - Community Platform</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/accessibility.css">
+</head>
+<body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>🏠 HopeVoice Hub</h1>
+                <p class="tagline">Cobourg Community Platform</p>
+            </div>
+            <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            <ul id="nav-menu" class="nav-menu">
+                <li><a href="#home" data-section="home">Home</a></li>
+                <li><a href="#voiceup" data-section="voiceup">VoiceUp</a></li>
+                <li><a href="#needs-board" data-section="needs-board">Needs Board</a></li>
+                <li><a href="#resource-radar" data-section="resource-radar">Resource Radar</a></li>
+                <li><a href="#rightsbot" data-section="rightsbot">RightsBot</a></li>
+                <li><a href="#civic-stories" data-section="civic-stories">Civic Stories</a></li>
+                <li><a href="#ask-lawyer" data-section="ask-lawyer">Ask a Lawyer</a></li>
+                <li><a href="#food-finder" data-section="food-finder">FoodFinder</a></li>
+                <li><a href="#outreach" data-section="outreach">Outreach</a></li>
+                <li><a href="#advocacy" data-section="advocacy">Advocacy</a></li>
+                <li><a href="#incident-logger" data-section="incident-logger">Incident Logger</a></li>
+                <li><a href="#news" data-section="news">Street News</a></li>
+                <li><a href="#respect-point" data-section="respect-point">RespectPoint</a></li>
+                <li><a href="#gallery" data-section="gallery">StreetGallery</a></li>
+                <li><a href="#navigator" data-section="navigator">Navigator</a></li>
+                <li><a href="#health-log" data-section="health-log">HealthLog</a></li>
+                <li><a href="#hope-map" data-section="hope-map">HopeMap</a></li>
+                <li><a href="#admin" data-section="admin" class="admin-link">Admin</a></li>
+            </ul>
+            <div class="accessibility-controls">
+                <button id="toggle-contrast" class="btn-icon" aria-label="Toggle high contrast">
+                    🌗
+                </button>
+                <button id="toggle-motion" class="btn-icon" aria-label="Toggle reduced motion">
+                    ⏸️
+                </button>
+                <button id="increase-font" class="btn-icon" aria-label="Increase font size">
+                    A+
+                </button>
+                <button id="decrease-font" class="btn-icon" aria-label="Decrease font size">
+                    A-
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section active" aria-labelledby="home-heading">
+            <div class="container">
+                <h2 id="home-heading">Welcome to HopeVoice Hub</h2>
+                <p class="intro">A dynamic, privacy-respecting platform built to amplify voices, connect to vital resources, and drive civic change.</p>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎙️</div>
+                        <h3>VoiceUp</h3>
+                        <p>Share your story through voice recordings</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📋</div>
+                        <h3>Needs Board</h3>
+                        <p>Post urgent needs and find help</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🗺️</div>
+                        <h3>Resource Radar</h3>
+                        <p>Find services, shelters, and resources</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚖️</div>
+                        <h3>RightsBot</h3>
+                        <p>Get instant rights guidance</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏛️</div>
+                        <h3>Civic Stories</h3>
+                        <p>Send messages to council</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">👨‍⚖️</div>
+                        <h3>Ask a Lawyer</h3>
+                        <p>Get legal advice anonymously</p>
+                    </div>
+                </div>
+
+                <div class="privacy-notice">
+                    <h3>🔒 Your Privacy Matters</h3>
+                    <p>All data is stored locally on your device. You control your information. Post anonymously whenever you want.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Loading indicator for dynamic sections -->
+        <div id="section-loader" class="section-loader hidden" aria-live="polite" aria-busy="false">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 HopeVoice Hub - Cobourg Community Platform</p>
+            <p class="footer-links">
+                <a href="#privacy">Privacy Policy</a> | 
+                <a href="#accessibility">Accessibility</a> | 
+                <a href="#help">Help</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/utils/storage.js"></script>
+    <script src="js/utils/accessibility.js"></script>
+    <script src="js/utils/audio.js"></script>
+    <script src="js/core/router.js"></script>
+    <script src="js/modules/voiceup.js"></script>
+    <script src="js/modules/needs-board.js"></script>
+    <script src="js/modules/resource-radar.js"></script>
+    <script src="js/modules/rightsbot.js"></script>
+    <script src="js/modules/civic-stories.js"></script>
+    <script src="js/modules/ask-lawyer.js"></script>
+    <script src="js/modules/food-finder.js"></script>
+    <script src="js/modules/outreach.js"></script>
+    <script src="js/modules/advocacy.js"></script>
+    <script src="js/modules/incident-logger.js"></script>
+    <script src="js/modules/news.js"></script>
+    <script src="js/modules/respect-point.js"></script>
+    <script src="js/modules/gallery.js"></script>
+    <script src="js/modules/navigator.js"></script>
+    <script src="js/modules/health-log.js"></script>
+    <script src="js/modules/hope-map.js"></script>
+    <script src="js/modules/admin.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
