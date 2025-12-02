@@ -1,0 +1,111 @@
+/* Accessibility-specific styles */
+
+/* Focus visible styles */
+:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 3px;
+}
+
+/* Screen reader only content */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Ensure sufficient color contrast */
+body.high-contrast a {
+    text-decoration: underline;
+}
+
+body.high-contrast .btn {
+    border: 2px solid currentColor;
+}
+
+/* Ensure touch targets are large enough */
+@media (pointer: coarse) {
+    button,
+    a,
+    input[type="checkbox"],
+    input[type="radio"] {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
+/* Skip navigation improvements */
+.skip-link:focus {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 9999;
+    padding: 1rem 2rem;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Keyboard navigation indicators */
+*:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 3px;
+}
+
+/* High contrast mode adjustments */
+@media (prefers-contrast: high) {
+    :root {
+        --border-color: #000000;
+    }
+    
+    .btn,
+    .card,
+    input,
+    select,
+    textarea {
+        border-width: 2px;
+    }
+}
+
+/* Ensure form labels are associated properly */
+label[for] {
+    cursor: pointer;
+}
+
+/* ARIA live region styling */
+[aria-live] {
+    position: relative;
+}
+
+/* Error message styling */
+.error-message {
+    color: var(--danger-color);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+input[aria-invalid="true"],
+select[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+    border-color: var(--danger-color);
+    border-width: 2px;
+}
+
+/* Required field indicator */
+.required::after {
+    content: " *";
+    color: var(--danger-color);
+}
+
+/* Loading/busy state */
+[aria-busy="true"] {
+    opacity: 0.6;
+    pointer-events: none;
+}
